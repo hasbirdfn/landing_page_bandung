@@ -1,0 +1,101 @@
+ Properti Warna dan Latar Belakang
+color: Menentukan warna teks.
+background-color: Menentukan warna latar belakang elemen.
+background-image: Menentukan gambar sebagai latar belakang.
+background-repeat: Menentukan apakah gambar latar belakang diulang atau tidak.
+background-size: Mengatur ukuran gambar latar belakang.
+opacity: Mengatur transparansi elemen.
+
+2. Properti Teks (Text)
+font-family: Menentukan jenis font untuk teks.
+font-size: Menentukan ukuran font.
+font-weight: Menentukan ketebalan font (misalnya, normal atau bold).
+font-style: Menentukan gaya font (misalnya, normal, italic).
+line-height: Menentukan tinggi baris teks.
+letter-spacing: Menentukan jarak antar karakter.
+text-align: Menentukan perataan teks (misalnya, kiri, tengah, kanan).
+text-decoration: Menambahkan dekorasi teks (misalnya, underline, strikethrough).
+text-transform: Menentukan transformasi teks (misalnya, uppercase, lowercase, capitalize, none).
+
+3. Properti Layout dan Tampilan
+display: Menentukan bagaimana elemen ditampilkan (misalnya, block, inline, flex, grid).
+position: Menentukan posisi elemen (misalnya, sticky, static, relative, absolute, fixed).
+top, right, bottom, left: Digunakan bersama position untuk menentukan posisi elemen.
+z-index: Menentukan tumpukan elemen (mana yang lebih depan atau belakang).
+float: Mengatur apakah elemen mengalir ke kiri atau kanan.
+clear: Menentukan apakah elemen dapat "membersihkan" aliran elemen sebelumnya.
+
+4. Properti Ukuran dan Jarak
+width: Menentukan lebar elemen.
+height: Menentukan tinggi elemen.
+margin: Menentukan jarak luar (spasi di luar elemen).
+padding: Menentukan jarak dalam (spasi di dalam elemen).
+border: Menentukan gaya, lebar, dan warna batas elemen.
+box-sizing: Menentukan apakah lebar dan tinggi elemen termasuk border dan padding atau tidak.
+max-width, min-width: Menentukan lebar maksimum dan minimum elemen.
+max-height, min-height: Menentukan tinggi maksimum dan minimum elemen.
+5. Flexbox dan Grid
+display: flex: Mengatur kontainer sebagai flexbox.
+flex-direction: Menentukan arah fleksibel (misalnya, row, column).
+justify-content: Menyelaraskan item dalam kontainer flex secara horizontal.
+align-items: Menyelaraskan item dalam kontainer flex secara vertikal.
+flex-wrap: Menentukan apakah item di dalam flexbox akan membungkus atau tidak.
+display: grid: Mengatur kontainer sebagai grid.
+grid-template-columns, grid-template-rows: Menentukan jumlah dan ukuran kolom atau baris dalam grid.
+grid-gap: Menentukan jarak antara item grid.
+6. Properti Transisi dan Animasi
+transition: Menentukan properti CSS yang akan dianimasikan saat terjadi perubahan.
+animation: Menentukan animasi untuk elemen, termasuk durasi, kecepatan, dan efek animasi.
+transform: Menerapkan transformasi pada elemen (misalnya, rotasi, skala).
+@keyframes: Menentukan langkah-langkah untuk animasi.
+7. Properti Transparansi dan Bayangan
+box-shadow: Menambahkan bayangan pada elemen.
+text-shadow: Menambahkan bayangan pada teks.
+visibility: Menentukan apakah elemen terlihat atau tidak (tersembunyi tapi masih mengambil ruang di layout).
+8. Properti Flexbox dan Alignment
+align-items: Menyelaraskan elemen di dalam kontainer flex secara vertikal.
+justify-content: Menyelaraskan elemen dalam kontainer flex secara horizontal.
+align-self: Menyelaraskan elemen secara individu dalam kontainer flex.
+flex-grow: Menentukan seberapa besar elemen tumbuh dalam kontainer flex.
+flex-shrink: Menentukan seberapa besar elemen dapat mengecil dalam kontainer flex.
+flex-basis: Menentukan ukuran dasar elemen dalam kontainer flex.
+9. Properti UI dan Tampilan
+cursor: Menentukan jenis kursor yang akan ditampilkan ketika melayang di atas elemen (misalnya, pointer, default).
+visibility: Menentukan apakah elemen terlihat atau tidak (tersembunyi, namun tetap mengalokasikan ruang).
+pointer-events: Menentukan apakah elemen dapat menerima interaksi klik atau tidak.
+10. Properti Responsif
+@media: Aturan CSS untuk membuat desain responsif berdasarkan ukuran layar.
+max-width, min-width: Digunakan dalam konteks responsif untuk mengatur gaya berdasarkan ukuran layar.
+11. Properti Z-Index dan Tumpukan
+z-index: Menentukan urutan lapisan elemen saat ditumpuk dengan elemen lain.
+12. Font dan Tipografi
+font-family: Menentukan jenis font yang digunakan.
+font-size: Menentukan ukuran font.
+font-weight: Menentukan ketebalan font (misalnya, normal, bold).
+line-height: Menentukan tinggi baris teks.
+letter-spacing: Menentukan jarak antar huruf.
+13. Properti Kontrol Tabel
+border-collapse: Menentukan apakah border tabel akan digabungkan atau dipisahkan.
+border-spacing: Menentukan jarak antara sel tabel.
+caption-side: Menentukan posisi caption tabel (misalnya, di atas atau di bawah tabel).
+
+
+Perbedaan Utama
+position: fixed selalu tetap di posisi yang sama di layar, terlepas dari konteks induknya.
+position: sticky hanya "menempel" setelah mencapai posisi tertentu dalam konteks induknya, dan akan berhenti menempel jika elemen induk keluar dari viewport (misalnya, saat pengguna terus menggulir halaman ke bawah).
+
+object-fit
+Properti object-fit memiliki beberapa nilai yang menentukan bagaimana konten media seperti gambar, video, atau elemen <object> disesuaikan dengan elemen kontainernya. Berikut adalah nilai-nilai yang tersedia:
+
+fill:
+Default. Konten akan disesuaikan agar mengisi elemen sepenuhnya, dan dapat terdistorsi untuk melakukannya.
+contain:
+Konten diubah ukurannya agar sepenuhnya terlihat di dalam elemen tanpa mengubah aspek rasio. Mungkin ada ruang kosong pada sisi elemen(kanan kiri).
+cover:
+Konten akan mengisi elemen sepenuhnya, menjaga aspek rasio, dan memotong bagian konten jika diperlukan agar sesuai.
+none:
+Ukuran asli konten dipertahankan, dan konten tidak diubah ukurannya untuk mengisi elemen.
+scale-down:
+Konten akan diubah ukurannya seperti none atau contain, mana yang lebih kecil. Dengan kata lain, konten hanya dikecilkan jika ukurannya lebih besar dari kontainer.
+
+align-self: Properti ini digunakan untuk menimpa nilai default align-items yang diterapkan pada kontainer flex. Setiap elemen di dalam kontainer flex bisa memiliki nilai align-self yang berbeda. Nilai yang tersedia adalah flex-start(kiri), flex-end(kanan), center(tengah gafull content), baseline, dan stretch(full content dan ditengah).

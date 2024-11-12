@@ -1,0 +1,376 @@
+<!-- catatan
+Berikut adalah catatan yang sudah kita pelajari sejauh ini tentang styling.
+
+Rule
+Sebuah aturan styling yang harus diterapkan pada elemen HTML. Dalam sebuah rule, ada selector dan deklarasi properti styling.
+
+Selector
+Bagian yang mengidentifikasi target elemen untuk menetapkan sebuah rule.
+
+Declaration
+Sebuah bagian dari rule yang terdiri dari pasangan properti dan nilainya.
+
+External Style Sheet
+Berkas terpisah yang di dalamnya hanya ada satu atau lebih rules yang akan digunakan pada website.
+
+Embedded Style Sheet
+Kumpulan rules yang dituliskan dalam berkas HTML dengan menggunakan elemen <style>.
+
+Inline Style
+Styling yang diterapkan pada elemen HTML dengan menggunakan atribut style. 
+
+
+universal selector
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <p>
+      Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka
+      teks pada paragraf ini akan berwarna hijau
+    </p>
+    <p lang="en-us">
+      This is an English paragraph contains en-us value of lang attribute, so
+      this text will be green and italic.
+    </p>
+
+    <h1>Ini merupakan sebuah header biasa</h1>
+    <h1 lang="en-us">This is an English Header</h1>
+
+    <p class="warning">
+      Perhatikan paragraf ini! Paragraf ini merupakan paragraf yang memiliki
+      kelas bernilai warning, sehingga teks dari paragraf ini akan berwarna
+      merah
+    </p>
+
+    <div id="content">
+      <p>
+        Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai
+        "content", seharusnya paragraf ini dibungkus dalam border yang memiliki
+        padding 20px
+      </p>
+    </div>
+  </body>
+</html>
+
+
+css sebelumnya
+body {
+    font-family: 'Quicksand', sans-serif;
+  }
+   
+
+   
+h2, h3 {
+color: #00a2c6;
+}
+
+footer {
+padding: 20px;
+color: white;
+background-color: #00a2c6;
+}
+
+.normal {
+    font-weight: normal;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .bolder {
+    font-weight: bolder;
+  }
+  
+  .lighter {
+    font-weight: lighter;
+  }
+  
+  .fw100 {
+    font-weight: 100;
+  }
+  
+  .fw200 {
+    font-weight: 200;
+  }
+  
+  .fw300 {
+    font-weight: 300;
+  }
+  
+  .fw400 {
+    font-weight: 400;
+  }
+  
+  .fw500 {
+    font-weight: 500;
+  }
+  
+  .fw600 {
+    font-weight: 600;
+  }
+  
+  .fw700 {
+    font-weight: 700;
+  }
+  
+  .fw800 {
+    font-weight: 800;
+  }
+  
+  .fw900 {
+    font-weight: 900;
+  }
+  
+/* font variants */
+h1 {
+    font-variant: small-caps;
+}
+
+.ln2 {
+    line-height: 2;
+  }
+  
+  .ln200 {
+    line-height: 200%;
+  }
+  
+  .ln2em {
+    line-height: 2em;
+  }
+  
+  /* main {
+    font-family: sans-serif;
+  }
+  
+  .transform-none {
+    text-transform: none;
+  }
+  
+  .transform-capitalize {
+    text-transform: capitalize;
+  }
+  
+  .transform-lowercase {
+    text-transform: lowercase;
+  }
+  
+  .transform-uppercase {
+    text-transform: uppercase;
+  } */
+
+
+  main {
+    font-family: sans-serif;
+  }
+  
+  .letter-spacing {
+    letter-spacing: 10px;
+  }
+  
+  .word-spacing {
+    word-spacing: 1.5em;
+  }
+  
+
+  main {
+    font-family: sans-serif;
+  }
+  
+  p {
+    font-size: 2rem;
+  }
+  
+  .one {
+    text-shadow: 2px 2px 0px #000000;
+    background-color: #eeeeee;
+    color: #666666;
+  }
+  
+  .two {
+    text-shadow: 4px 4px 3px #666666;
+    background-color: #dddddd;
+    color: #666666;
+  }
+  
+  .three {
+    text-shadow: 4px 4px 7px #111111;
+    background-color: #cccccc;
+    color: #ffffff;
+  }
+  
+  .four {
+    text-shadow: -2px -2px #666666;
+    background-color: #cccccc;
+    color: #bbbbbb;
+  }
+  
+/* psuedo selector */
+
+  /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+a:link {
+    color: red;
+ }
+ 
+ /* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+ a:visited {
+    color: green;
+ }
+ 
+ /* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+ a:hover {
+    color: pink;
+ }
+ 
+ /* rule akan diterapkan pada sebuah tautan ketika ditekan */
+ a:active {
+    color:orange;
+ }
+ 
+ blockquote::before,
+blockquote::after {
+  content: '"';
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Rule styling akan diterapkan pada karakter pertama di sebuah paragraf */
+/* p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: saddlebrown;
+  } */
+
+
+
+
+body {
+  font-family: 'Quicsand', sans-serif;
+}
+
+h2,h3 {
+  color : #00a2c6
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+
+footer{
+  padding: 18px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+/* 
+p {
+  background-color: red;
+}
+
+p.opacity-50 {
+  opacity: 50%;
+}
+
+p.opacity-100 {
+  opacity: 100%;
+} */
+
+
+div {
+  width: 50%;
+  height: 200px;
+
+  line-height: 200px;
+  text-align: center;
+}
+
+.box-1 {
+  background-color: rgb(255, 255, 0, 0.75);
+
+  float: left;
+}
+
+.box-2 {
+  background-color: hsl(120, 100%, 25%, 0.75);
+
+  float: left;
+  margin-left: -25%;
+}
+
+.box-3 {
+  background-color: #0000ffaa;
+
+  float: left;
+  margin-left: -25%;
+}
+
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: #11c5c6;
+}
+/* 
+p {
+  height: 75%;
+  width: 75%;
+  background-color: #fbdd1c;
+} */
+
+p {
+  width: 200px;
+  padding: 20px;
+  border: 3px solid blue;
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+}
+
+p:hover {
+  background-color: #00a2c6;
+  cursor: pointer;
+}
+
+
+/* Kode lainnya disembunyikan... */
+#content {
+  float: left;
+  width: 75%;
+}
+ 
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+ 
+@media screen and (max-width: 1000px) {
+  #content, aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+Pada kode di atas, kita menerapkan media query dengan rincian sebagai berikut.
+Media yang digunakan untuk menerapkan styling adalah layar perangkat dan kita pilih “screen”.
+Aturan kode styling akan ditetapkan pada saat ukuran lebar viewport maksimal 1000 piksel. Dengan kata lain, styling akan diterapkan jika lebar viewport di bawah 1000 piksel.
+Terapkan lebar elemen sebesar 100% pada elemen <div id="content"> dan <aside> terhadap elemen induknya (parent element) supaya elemen sejajar secara vertikal (atas-bawah).

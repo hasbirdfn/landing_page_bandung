@@ -1,0 +1,133 @@
+* {
+  /* Tanpa box-sizing: border-box (default, yaitu content-box): */
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Quicksand', sans-serif;
+ 
+  margin: 0;
+  padding: 0;
+}
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+  
+
+h2,
+h3 {
+  color: #00a2c6; 
+}
+
+ 
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+  position: sticky;
+  top: 0; //ketika discroll tetap nav diatas(top)
+}
+
+nav ul {
+  /* 1 rem = 16px */
+  padding-inline: 4rem;
+  display: flex; 
+  gap: 2rem;
+}
+ 
+nav li {
+  list-style-type: none;
+}
+
+ 
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+ 
+nav a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.featured-image {
+  width: 100%;          /* Mengatur lebar elemen agar memenuhi 100% dari kontainer induknya */
+  max-height: 300px;    /* Membatasi tinggi maksimal elemen menjadi 300px */
+  object-fit: cover;    /* Mengubah cara elemen konten (misalnya gambar) disesuaikan dengan elemen kotak */
+  object-position: center; /* Mengatur posisi konten di tengah elemen */
+}
+
+.profile img {
+  max-width: 200px;
+}
+ 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+ /* padding dlm card */
+  padding: 20px;
+}
+
+ 
+main {
+  /* padding yang luar card */
+  padding: 20px;
+  display: flex;
+  /* gap jarak konten main dengan aside samping */
+  gap: 1.5rem; 
+}
+ 
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+ 
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
+ 
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+ 
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}

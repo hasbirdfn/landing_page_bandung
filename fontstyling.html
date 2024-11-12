@@ -1,0 +1,105 @@
+<!-- 
+font-family: menetapkan jenis font yang akan diterapkan pada target.
+font-size: menentukan ukuran pada teks.
+font-weight: menentukan ketebalan pada teks. 
+font-style: menetapkan styling yang diterapkan pada teks.
+font-variant: menentukan teks untuk menggunakan gaya small caps (huruf kapital kecil).
+font: sebagai shorthand dari properti font yang ada. 
+
+
+catatan :
+Seluruh nilai font yang bukan merupakan generic font families harus dituliskan secara kapital. Contohnya, “Arial” bukan dituliskan “arial”.
+Gunakan tanda koma (,) untuk memisahkan antara nilai font yang digunakan. 
+Selalu tanda kutip (“) untuk membungkus nilai font yang memiliki spasi pada namanya. Contohnya “Open Sans”.
+
+Mungkin kita bertanya-tanya mengapa perlu memberikan lebih dari satu nilai pada font-family? Hal tersebut penting karena tidak semua browser mendukung semua jenis font. Jadi, menambahkan lebih dari satu nilai font dapat memberikan alternatif pada browser dalam menampilkan font jika font utama yang diterapkan tidak didukung oleh browser. 
+
+
+Jenis  jenis font
+Serif: jenis font yang memiliki runcing pada garis akhir karakternya. Times New Roman merupakan salah satu jenis serif font.
+Sans-serif: jenis font yang tidak meruncing pada garis akhir karakternya. Contohnya, “Open Sans”, “Fira Sans” dan lainnya.
+Monospace: jenis font yang memiliki nilai lebar tiap karakternya sama. Consolas merupakan salah satu jenisnya.
+Cursive: jenis font yang tampak seperti handwriting atau hasil tulisan tangan.
+Fantasy: jenis font yang merepresentasikan karakteristik yang menyenangkan.
+System-ui: jika menerapkan nilai ini maka font yang diterapkan akan sama seperti font yang digunakan pada sistem operasi kita.
+Math: jenis font yang digunakan untuk penulisan rumus-rumus matematika.
+Emoji: jenis font yang digunakan untuk menampilkan emoji.
+Fangsong: jenis font yang menampilkan gaya penulisan Chinese.
+
+
+Hal yang terakhir, kita juga bisa menentukan ukuran font dengan menuliskan kata kunci secara spesifik yang tersedia pada CSS. Kata kunci tersebut: xx-small, x-small, small, medium, large, x-large, dan xx-large.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+    
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+  </head>
+  <body>
+    <!-- <header>
+
+    <h1>Font Family, sans serif</h1>
+        <div class="jumbotron">
+        <h1>Bandung</h1>
+        <p>
+          Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi
+          tersebut.
+        </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Sejarah</a></li>
+          <li><a href="#">Geografis</a></li>
+          <li><a href="#">Wisata</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <h1>Font Weight</h1>
+    <h2>Ketebalan font Weight</h2>
+    <p>
+      <span class="normal">normal</span> | <span class="bold">bold</span> |
+      <span class="bolder">bolder</span> | <span class="lighter">lighter</span> |
+      <span class="fw100">fw100</span> | <span class="fw200">fw200</span> |
+      <span class="fw300">fw300</span> | <span class="fw400">fw400</span> |
+      <span class="fw500">fw500</span> | <span class="fw600">fw600</span> |
+      <span class="fw700">fw700</span> | <span class="fw800">fw800</span> |
+      <span class="fw900">fw900</span>
+    </p>
+
+
+    <h1>Font-variant</h1>
+    <h1>Ini Merupakan Teks Dengan Huruf Kapital Kecil</h1>
+    <!-- 
+    Kita yang terbiasa dengan aplikasi document editor seperti Microsoft Word tentu tahu atau sudah mencoba fitur small caps. Fitur ini dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat -->
+
+    <h1>shorthand</h1>
+    <!-- Shorthand
+Menspesifikasikan masing-masing nilai properti font akan menghasilkan banyak sekali kode repetitif. CSS memiliki properti CSS yang biasa disebut dengan shorthand properti. Ia memberikan suatu “jalan pintas” untuk menuliskan properti-properti tersebut ke dalam satu properti, yaitu font.  -->
+  
+
+    <h1>Line Height</h1>
+    <!-- Cara pertama merupakan cara yang paling mudah digunakan karena hanya menentukan nilai dengan satu angka. Konsepnya, angka tersebut nantinya dikalikan dengan nilai font-size sebelum diterapkan pada nilai properti line-height. Contohnya, ukuran font standar pada paragraf adalah 16 piksel dan kita definisikan properti line-height dengan nilai 2. Alhasil, seharusnya nilai properti line-height adalah 16 piksel * 2 = 32 piksel (dua kali lebih besar dari ukuran font).
+
+Properti line-height dapat diaplikasikan ke seluruh elemen yang ada pada HTML dan nilainya dapat diturunkan pada elemen turunannya.
+
+ -->
+
+ <p class="ln2">
+    Properti line-height digunakan untuk mengatur jarak minimal teks pada garis dasar ke garis
+    dalam menampilkannya pada halaman web.
+  </p>
+  <p class="ln200">
+    Properti line-height digunakan untuk mengatur jarak minimal teks pada garis dasar ke garis
+    dalam menampilkannya pada halaman web.
+  </p>
+  <p class="ln2em">
+    Properti line-height digunakan untuk mengatur jarak minimal teks pada garis dasar ke garis
+    dalam menampilkannya pada halaman web.
+  </p>
+</body>
+</html>
